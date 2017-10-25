@@ -1,0 +1,76 @@
+.about {
+  background: url("../../img/about-bg.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; }
+
+.container {
+  position: relative;
+  width: 1100px;
+  display: block;
+  margin: 0 auto; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.about__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Gagalin;
+  font-size: 72px;
+  color: #2f3234;
+  margin-top: 80px; }
+
+.about__text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 90px;
+  width: 100%; }
+
+.text__card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 285px; }
+
+.card__title {
+  font-family: Lifehack;
+  font-size: 24px;
+  color: #2f3234;
+  text-align: center;
+  margin-top: 35px; }
+
+.card__text {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Ubuntu Light";
+  color: #2f3234;
+  font-size: 14px;
+  line-height: 1.5em; }
