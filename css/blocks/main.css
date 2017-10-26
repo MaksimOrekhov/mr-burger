@@ -3,7 +3,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: url("../../img/bg.png") no-repeat;
   background-size: cover;
@@ -76,18 +76,18 @@
   color: #fff;
   text-transform: uppercase; }
 
-.order {
+.order__link {
   display: inline-block;
   text-decoration: none;
   background-color: #e45028;
   border-radius: 5px;
-  margin-right: 78px;
-  margin-top: 9px; }
+  padding: 11px 15px;
+  color: #fff; }
 
 .order__button {
-  color: #fff;
   text-transform: uppercase;
-  padding: 11px 15px; }
+  margin-right: 78px;
+  margin-top: 9px; }
 
 .middle__wrapper {
   display: -webkit-box;
@@ -121,9 +121,6 @@
   align-self: center;
   width: 855px; }
 
-.middle__burger {
-  position: relative; }
-
 .middle__text {
   display: -webkit-box;
   display: -webkit-flex;
@@ -139,12 +136,12 @@
   align-self: center; }
 
 .burger__img {
-  margin-left: 35px; }
+  margin-left: 15px; }
 
 .drops__img {
   position: absolute;
-  top: 59px;
-  left: -2px; }
+  top: 65px;
+  left: -20px; }
 
 .middle__text {
   display: -webkit-box;
@@ -178,33 +175,28 @@
   top: 75px;
   right: 50px;
   position: fixed; }
-
-.paginator__list {
-  list-style: none; }
-
-.paginator__item:not(:last-child) {
-  margin-bottom: 7px; }
-
-.paginator__link {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  font-size: 16px; }
-
-.paginator__link-active:after {
-  content: '';
-  position: absolute;
-  top: 13px;
-  left: 34px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid white;
-  border-radius: 50%;
-  background-color: transparent; }
-
-.scroll__link {
-  display: inline-block; }
+  .paginator__list {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .paginator__item:not(:last-child) {
+    margin-bottom: 3px; }
+  .paginator__link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px; }
+  .paginator__link-active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: transparent; }
 
 .scroll {
   display: -webkit-box;
@@ -216,3 +208,5 @@
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 140px; }
+  .scroll__link {
+    display: inline-block; }

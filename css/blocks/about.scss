@@ -1,8 +1,9 @@
 .about {
   background: url("../../img/about-bg.png") no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  min-height: 650px;  
 }
 
 .container {
@@ -12,7 +13,7 @@
   margin: 0 auto;
 }
 
-.wrapper {
+.about__wrapper {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -48,11 +49,11 @@
   margin-top: 35px;  
 }
 
-.card__text {
+.card__info {
   text-align: center;
   margin-top: 20px;    
   font-family: "Ubuntu Light";
   color: #2f3234;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5em;
 } 

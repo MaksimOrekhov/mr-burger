@@ -1,45 +1,46 @@
 @import url("normalize.css");
 @import url("./blocks/main.css");
 @import url("./blocks/about.css");
+@import url("./blocks/slider.css");
 
 @font-face {
     font-family: "Ubuntu";
-    src: url('../fonts/Ubuntu-B.ttf') format("truetype");
+    src: url('../fonts/Ubuntu-B.woff') format("woff");
     font-weight: bold;
     font-style: normal;
 } 
   
 @font-face {
     font-family: "Ubuntu";
-    src: url('../fonts/Ubuntu-Regular.ttf') format("truetype");
+    src: url('../fonts/Ubuntu-Regular.woff') format("woff");
     font-weight: normal;
     font-style: normal;
 }
   
 @font-face {
     font-family: "Ubuntu Medium";
-    src: url('../fonts/Ubuntu-Medium.ttf') format("truetype");
+    src: url('../fonts/Ubuntu-Medium.woff') format("woff");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu Light";
-    src: url('../fonts/Ubuntu-Light.ttf') format("truetype");
+    src: url('../fonts/Ubuntu-Light.woff') format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Lifehack";
-    src: url('../fonts/Lifehack Medium.otf') format("opentype");
+    src: url('../fonts/Lifehack Medium.woff') format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Gagalin";
-    src: url('../fonts/Gagalin-Regular.otf') format("opentype");
+    src: url('../fonts/Gagalin-Regular.woff') format("woff");
     font-weight: normal;
     font-style: normal;
 }
