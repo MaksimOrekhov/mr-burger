@@ -163,6 +163,8 @@
   justify-content: space-between; }
 
 .logo {
+  display: inline-block;
+  margin-top: 12px;
   margin-right: auto; }
 
 .menu {
@@ -330,7 +332,8 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 140px; }
+  margin-top: 140px;
+  margin-bottom: 40px; }
   .scroll__link {
     display: inline-block; }
 
