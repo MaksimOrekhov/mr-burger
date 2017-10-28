@@ -1,0 +1,80 @@
+.comments {
+  background-color: #d5d5d5;
+  display: flex;  
+  width: 100vw;
+  height: 100vh;
+  min-height: 650px;
+
+  &__block {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  &__item {
+    display: flex;
+    height: 50vh;
+    width: 25%;
+  }
+}
+
+@each $comments__item in (1, 2, 3, 4, 5, 6, 7, 8) {
+  .comments__item_#{$comments__item} {
+    background: url("../img/photo-#{$comments__item}.png") center center no-repeat;
+    width: 25%;
+    height: 325px;
+    display: flex;
+    padding: 50px 30px 50px 20px;
+  }
+}
+
+.comments__item:hover {
+  box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset;
+
+  .overlay {
+    visibility: visible;
+  }
+
+}
+
+.overlay {
+  visibility: hidden;
+  color: #fff;
+
+  &__button {
+    display: inline-block;
+    background-color: #2f3234;
+    border-radius: 5px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: Gagalin, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+}
+
+.button__link {
+  display: inline-block;  
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Ubuntu Medium", sans-serif;
+  font-size: 13px;
+  padding: 13px 16px;
+}

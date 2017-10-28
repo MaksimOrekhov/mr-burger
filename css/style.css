@@ -61,6 +61,11 @@
   align-items: center;
   margin: 0 auto; }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .about {
   background: url("../img/about-bg.png") no-repeat;
   background-size: cover;
@@ -232,7 +237,11 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1; }
 
 .middle {
   position: relative;
@@ -297,7 +306,8 @@
   font-family: Lifehack;
   font-size: 65px;
   margin-top: 20px;
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1em; }
 
 .paginator {
   position: absolute;
@@ -350,6 +360,158 @@
   width: 100vw;
   height: 100vh;
   min-height: 650px; }
+
+.comments {
+  background-color: #d5d5d5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  min-height: 650px; }
+  .comments__block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .comments__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center; }
+  .comments__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50vh;
+    width: 25%; }
+
+.comments__item_1 {
+  background: url("../img/photo-1.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_2 {
+  background: url("../img/photo-2.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_3 {
+  background: url("../img/photo-3.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_4 {
+  background: url("../img/photo-4.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_5 {
+  background: url("../img/photo-5.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_6 {
+  background: url("../img/photo-6.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_7 {
+  background: url("../img/photo-7.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item_8 {
+  background: url("../img/photo-8.png") center center no-repeat;
+  width: 25%;
+  height: 325px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 30px 50px 20px; }
+
+.comments__item:hover {
+  -webkit-box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset;
+  box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset; }
+  .comments__item:hover .overlay {
+    visibility: visible; }
+
+.overlay {
+  visibility: hidden;
+  color: #fff; }
+  .overlay__button {
+    display: inline-block;
+    background-color: #2f3234;
+    border-radius: 5px; }
+  .overlay__title {
+    text-transform: uppercase;
+    font-family: Gagalin, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px; }
+  .overlay__text {
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-bottom: 10px; }
+
+.button__link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Ubuntu Medium", sans-serif;
+  font-size: 13px;
+  padding: 13px 16px; }
 
 html {
   width: 100%;
