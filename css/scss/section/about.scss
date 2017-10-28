@@ -4,28 +4,28 @@
   width: 100vw;
   height: 100vh;
   min-height: 650px;  
-}
 
-.about__wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 
-.about__title {
-  display: flex;
-  font-family: Gagalin;
-  font-size: 72px;
-  color: #2f3234;
-  margin-top: 80px;
-}
+  &__title {
+    display: flex;
+    font-family: Gagalin;
+    font-size: 72px;
+    color: #2f3234;
+    margin-top: 80px;
+  }
 
-.about__text {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;  
-  margin-top: 90px;
-  width: 100%;
+  &__text {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;  
+    margin-top: 90px;
+    width: 100%;
+  }
 }
 
 .text__card {
