@@ -7,6 +7,7 @@
 
   &__block {
     display: flex;
+    height: 100%;
   }
 
   &__list {
@@ -14,11 +15,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    height: 100%;    
   }
 
   &__item {
     display: flex;
-    height: 50vh;
     width: 25%;
   }
 }
@@ -26,15 +27,16 @@
 @each $comments__item in (1, 2, 3, 4, 5, 6, 7, 8) {
   .comments__item_#{$comments__item} {
     background: url("../img/photo-#{$comments__item}.png") center center no-repeat;
+    background-size: cover;
     width: 25%;
-    height: 325px;
+    height: 50%;
     display: flex;
     padding: 50px 30px 50px 20px;
   }
 }
 
 .comments__item:hover {
-  box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset;
+  box-shadow: 0 0 0 325px rgba(69, 69, 69, 0.7) inset;
 
   .overlay {
     visibility: visible;
@@ -45,6 +47,7 @@
 .overlay {
   visibility: hidden;
   color: #fff;
+  max-width: 82%;
 
   &__button {
     display: inline-block;
@@ -55,16 +58,16 @@
   &__title {
     text-transform: uppercase;
     font-family: Gagalin, sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &__text {
     font-family: "Ubuntu Light", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
   }
   
 }
@@ -75,6 +78,6 @@
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Ubuntu Medium", sans-serif;
-  font-size: 13px;
+  font-size: 0.81rem;
   padding: 13px 16px;
 }

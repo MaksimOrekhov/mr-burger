@@ -356,7 +356,8 @@ ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    height: 100%; }
   .comments__list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -372,19 +373,20 @@ ul {
     flex-wrap: wrap;
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
-    align-content: center; }
+    align-content: center;
+    height: 100%; }
   .comments__item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 50vh;
     width: 25%; }
 
 .comments__item_1 {
   background: url("../img/photo-1.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -393,8 +395,9 @@ ul {
 
 .comments__item_2 {
   background: url("../img/photo-2.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -403,8 +406,9 @@ ul {
 
 .comments__item_3 {
   background: url("../img/photo-3.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -413,8 +417,9 @@ ul {
 
 .comments__item_4 {
   background: url("../img/photo-4.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,8 +428,9 @@ ul {
 
 .comments__item_5 {
   background: url("../img/photo-5.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -433,8 +439,9 @@ ul {
 
 .comments__item_6 {
   background: url("../img/photo-6.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -443,8 +450,9 @@ ul {
 
 .comments__item_7 {
   background: url("../img/photo-7.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -453,8 +461,9 @@ ul {
 
 .comments__item_8 {
   background: url("../img/photo-8.png") center center no-repeat;
+  background-size: cover;
   width: 25%;
-  height: 325px;
+  height: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,14 +471,15 @@ ul {
   padding: 50px 30px 50px 20px; }
 
 .comments__item:hover {
-  -webkit-box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset;
-  box-shadow: 0 0 0 163px rgba(69, 69, 69, 0.7) inset; }
+  -webkit-box-shadow: 0 0 0 325px rgba(69, 69, 69, 0.7) inset;
+  box-shadow: 0 0 0 325px rgba(69, 69, 69, 0.7) inset; }
   .comments__item:hover .overlay {
     visibility: visible; }
 
 .overlay {
   visibility: hidden;
-  color: #fff; }
+  color: #fff;
+  max-width: 82%; }
   .overlay__button {
     display: inline-block;
     background-color: #2f3234;
@@ -477,14 +487,14 @@ ul {
   .overlay__title {
     text-transform: uppercase;
     font-family: Gagalin, sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: normal;
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
   .overlay__text {
     font-family: "Ubuntu Light", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.5em;
-    margin-bottom: 10px; }
+    margin-bottom: 17px; }
 
 .button__link {
   display: inline-block;
@@ -492,7 +502,7 @@ ul {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Ubuntu Medium", sans-serif;
-  font-size: 13px;
+  font-size: 0.81rem;
   padding: 13px 16px; }
 
 html {
