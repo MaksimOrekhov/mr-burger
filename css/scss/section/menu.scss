@@ -1,0 +1,67 @@
+.acco-menu {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/menu-bg.png") no-repeat;
+  background-size: cover;
+  min-height: 650px;
+}
+
+.menu__title {
+  font-family: Gagalin, sans-serif;
+  font-size: 72px;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 115px; 
+  margin-left: 95px;
+}
+
+.acco {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.acco__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.acco__item {
+  position: relative;
+  display: flex;
+  width: 80px;
+  flex-direction: column;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &-text {
+    width: 0;
+    overflow: hidden;
+  }
+
+  &-title {
+    font-family: Gagalin, sans-serif;
+    font-size: 40px;
+    color: #fff;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &__block {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+@each $acco__item in (meat, vegan, diet) {
+  .acco__item_#{$acco__item} {
+    background: url("../img/#{$acco__item}-bg.png") center right no-repeat;
+    background-size: cover;
+  }
+}

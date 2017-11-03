@@ -1,0 +1,115 @@
+.team {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/team-bg.png") no-repeat;
+  background-size: cover;
+  min-height: 650px;
+}
+
+.team__section {
+  position: absolute;
+  display: flex;
+  height: 100%;  
+  width: 49%;
+  background-color: rgba(57, 59, 60, 0.9);
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+
+.content__title {
+  font-family: Gagalin, sans-serif;
+  font-size: 72px;
+  font-weight: normal;
+  color: #f9b43b;
+  margin-top: 90px; 
+  margin-bottom: 90px;
+}
+
+.accordeon__list {
+  color: #fff;
+}
+
+.accordeon__item {
+  margin-bottom: 40px;
+}
+
+.item__title {
+  position: relative;
+  margin-bottom: 15px;
+  font-family: Gagalin, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #f9b43b;
+    top: 7px;
+    left: -20px;
+  }
+}
+
+.item__title-active {
+  color: #f9b43b;  
+
+  &:before {
+    position: absolute;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #f9b43b;
+    border-top: transparent;
+    top: 7px;
+    left: -20px;
+  }
+}
+
+.item__info {
+  height: 0;
+  overflow: hidden;
+}
+
+.item__info-active {
+  display: flex;
+  height: 100%;
+}
+
+.info__img {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.info__section {
+  margin-left: 20px;
+  max-width: 210px;
+}
+
+.info__occ {
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.info__text {
+  font-family: "Ubuntu Light", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+}

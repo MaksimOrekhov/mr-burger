@@ -37,17 +37,20 @@
 
 .comments__item:hover {
   box-shadow: 0 0 0 325px rgba(69, 69, 69, 0.7) inset;
+  
 
   .overlay {
-    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
   }
 
 }
 
 .overlay {
-  visibility: hidden;
+  opacity: 0;
   color: #fff;
   max-width: 82%;
+  
 
   &__button {
     display: inline-block;
