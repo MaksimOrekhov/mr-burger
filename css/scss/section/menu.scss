@@ -10,11 +10,11 @@
 
 .menu__title {
   font-family: Gagalin, sans-serif;
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: normal;
   color: #fff;
-  margin-top: 115px; 
-  margin-left: 95px;
+  margin-top: rem(115px); 
+  margin-left: rem(95px);
 }
 
 .acco {
@@ -34,7 +34,7 @@
 .acco__item {
   position: relative;
   display: flex;
-  width: 80px;
+  width: rem(80px);
   flex-direction: column;
   white-space: nowrap;
   cursor: pointer;
@@ -46,7 +46,7 @@
 
   &-title {
     font-family: Gagalin, sans-serif;
-    font-size: 40px;
+    font-size: rem(40px);
     color: #fff;
     position: absolute; 
     top: 50%;

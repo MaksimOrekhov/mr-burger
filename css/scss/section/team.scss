@@ -22,16 +22,16 @@
 .section__content {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  margin-left: rem(80px);
 }
 
 .content__title {
   font-family: Gagalin, sans-serif;
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: normal;
-  color: #f9b43b;
-  margin-top: 90px; 
-  margin-bottom: 90px;
+  color: $yellow;
+  margin-top: rem(90px); 
+  margin-bottom: rem(90px);
 }
 
 .accordeon__list {
@@ -39,14 +39,14 @@
 }
 
 .accordeon__item {
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 }
 
 .item__title {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   font-family: Gagalin, sans-serif;
-  font-size: 14px;
+  font-size: rem(14px);
   cursor: pointer;
 
   &:before {
@@ -55,23 +55,16 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #f9b43b;
-    top: 7px;
-    left: -20px;
+    top: rem(7px);
+    left: rem(-20px);
   }
 }
 
 .item__title-active {
-  color: #f9b43b;  
+  color: $yellow;  
 
   &:before {
-    position: absolute;
-    content: "";
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #f9b43b;
-    border-top: transparent;
-    top: 7px;
-    left: -20px;
+    transform: rotate(-180deg);
   }
 }
 
@@ -89,27 +82,27 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  height: 100px;
-  width: 100px;
+  height: rem(100px);
+  width: rem(100px);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .info__section {
-  margin-left: 20px;
-  max-width: 210px;
+  margin-left: rem(20px);
+  max-width: rem(210px);
 }
 
 .info__occ {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: rem(14px);
 }
 
 .info__text {
   font-family: "Ubuntu Light", sans-serif;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.5em;
 }

@@ -1,4 +1,16 @@
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+// resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
 @import url("normalize.css");
+@import "./scss/config/media";
 @import "./scss/layout/fonts";
 @import "./scss/layout/base";
 @import "./scss/config/mixins";
@@ -7,10 +19,12 @@
 @import "./scss/section/main.scss";
 @import "./scss/section/slider.scss";
 @import "./scss/section/comments.scss";
+@import "./scss/section/order.scss";
 @import "./scss/section/team.scss";
 @import "./scss/section/menu.scss";
 @import "./scss/section/location.scss";
 @import "./scss/section/footer.scss";
+
 
 
 html {

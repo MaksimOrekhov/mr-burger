@@ -31,12 +31,12 @@
     width: 25%;
     height: 50%;
     display: flex;
-    padding: 50px 30px 50px 20px;
+    padding: rem(50px) rem(30px) rem(50px) rem(20px);
   }
 }
 
 .comments__item:hover {
-  box-shadow: 0 0 0 325px rgba(69, 69, 69, 0.7) inset;
+  box-shadow: 0 0 0 rem(325px) rgba(69, 69, 69, 0.7) inset;
   
 
   .overlay {
@@ -54,21 +54,26 @@
 
   &__button {
     display: inline-block;
-    background-color: #2f3234;
-    border-radius: 5px;
+    background-color: $black;
+    border-radius: rem(5px);
+
+    &:hover {
+      background-color: darken($black, 10%);
+      transition: 0.3s;
+    }
   }
 
   &__title {
     text-transform: uppercase;
     font-family: Gagalin, sans-serif;
-    font-size: 2vh;
+    font-size: 1vmax;
     font-weight: normal;
     margin-bottom: 30px;
   }
 
   &__text {
     font-family: "Ubuntu Light", sans-serif;
-    font-size: 2vh;
+    font-size: 1vmax;
     line-height: 1.5em;
     margin-bottom: 17px;
   }
@@ -81,6 +86,6 @@
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Ubuntu Medium", sans-serif;
-  font-size: 1.7vh;
+  font-size: 1.1vmax;
   padding: 13px 16px;
 }

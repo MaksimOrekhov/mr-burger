@@ -14,16 +14,16 @@
   &__title {
     display: flex;
     font-family: Gagalin;
-    font-size: 72px;
-    color: #2f3234;
-    margin-top: 80px;
+    font-size: rem(72px);
+    color: $black;
+    margin-top: rem(80px);
   }
 
   &__text {
     display: flex;
     align-items: baseline;
     justify-content: space-between;  
-    margin-top: 90px;
+    margin-top: rem(90px);
     width: 100%;
   }
 }
@@ -32,22 +32,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 285px;
+  width: 31%;
 }
 
 .card__title {
   font-family: Lifehack;
-  font-size: 24px;
-  color: #2f3234;
+  font-size: rem(24px);
+  color: $black;
   text-align: center;
-  margin-top: 35px;
+  margin-top: rem(35px);
 }
 
 .card__info {
   text-align: center;
-  margin-top: 20px;    
+  margin-top: rem(16px);    
   font-family: "Ubuntu Light";
-  color: #2f3234;
-  font-size: 16px;
+  color: $black;
+  font-size: rem(14px);
   line-height: 1.5em;
 } 
