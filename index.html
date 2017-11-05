@@ -48,13 +48,15 @@
               <div class="order__button">
                 <a href="#" class="order__link">заказать</a>
               </div>
+              <a href="#" class="burger__menu">
+                <img src="./icons/burger-menu.svg" alt="" class="burger__menu-pic">
+              </a>
         </header>
         
           <section class="middle">
             <div class="middle__wrapper">
               <div class="middle__burger">
                 <img src="img/burger.png" alt="" class="burger__img">
-                <img src="icons/drops.svg" alt="" class="drops__img">
               </div>
               <div class="middle__text">
                 <div class="text__title">мы делаем</div>
@@ -72,7 +74,6 @@
       </section>
       </div>
 
-
         <!-- Мы лучшие -->
         <div class="maincontent">
           <section class="about">
@@ -82,29 +83,41 @@
                 <section class="about__text">
                   <div class="text__card">
                     <div class="card__pic">
-                      <img src="icons/meat.svg" alt="" class="pic__img">
+                      <svg class="pic__img pic__img-meat">
+                        <use xlink:href="./icons/sprite.svg#meat"></use>
+                      </svg>
                     </div>
-                    <div class="card__title">100% свежее мясо</div>
-                    <div class="card__info">
-                      <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
-                    </div>
-                  </div>
-                  <div class="text__card">
-                    <div class="card__pic">
-                      <img src="icons/hand.svg" alt="" class="pic__img">
-                    </div>
-                    <div class="card__title">Ручная сборка</div>
-                    <div class="card__info">
-                      <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                    <div class="card__block">
+                      <div class="card__title">100% свежее мясо</div>
+                      <div class="card__info">
+                        <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                      </div>
                     </div>
                   </div>
                   <div class="text__card">
                     <div class="card__pic">
-                      <img src="icons/natural.svg" alt="" class="pic__img">
+                      <svg class="pic__img pic__img-hand">
+                        <use xlink:href="./icons/sprite.svg#hand"></use>
+                      </svg>
                     </div>
-                    <div class="card__title">Натуральные ингредиенты</div>
-                    <div class="card__info">
-                      <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                    <div class="card__block">
+                      <div class="card__title">Ручная сборка</div>
+                      <div class="card__info">
+                        <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text__card">
+                    <div class="card__pic">
+                      <svg class="pic__img pic__img-natural">
+                        <use xlink:href="./icons/sprite.svg#natural"></use>
+                      </svg>
+                    </div>
+                    <div class="card__block">
+                      <div class="card__title">Натуральные ингредиенты</div>
+                      <div class="card__info">
+                        <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -146,7 +159,9 @@
                     <li class="accordeon__item">
                       <div class="item__title item__title-active">ричард джеймс</div>
                       <div class="item__info item__info-active">
-                        <div class="info__img" style="background-image: url('./img/team-pic.png')"></div>
+                        <div class="info_pic">
+                          <div class="info__img" style="background-image: url('./img/team-pic.png')"></div>
+                        </div>
                         <div class="info__section">
                           <div class="info__occ">Оператор</div>
                           <div class="info__text">
@@ -228,6 +243,7 @@
                     <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                     <div class="overlay__button">
                       <a href="#" class="button__link">подробнее</a>
+                      <a href="#" class="button__link-phones">читать отзыв</a>
                     </div>
                   </div>
                 </li>
@@ -237,6 +253,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                   </div>
                 </li>
@@ -246,6 +263,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                   </div>
                 </li>
@@ -255,6 +273,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                   </div>
                 </li>
@@ -264,6 +283,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                   </div>
                 </li>
@@ -273,6 +293,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                   </div>
                 </li>
@@ -282,6 +303,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                     </div>
                 </li>
@@ -291,6 +313,7 @@
                       <div class="overlay__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
                       <div class="overlay__button">
                         <a href="#" class="button__link">подробнее</a>
+                        <a href="#" class="button__link-phones">читать отзыв</a>
                       </div>
                     </div>
                 </li>
@@ -336,7 +359,7 @@
                     <div class="form__block-title">Квартира</div>
                     <input type="text" class="form__block-input">
                   </label>
-                  <label class="form__block">
+                  <label class="form__block form__block-phones">
                     <div class="form__block-title">Этаж</div>
                     <input type="text" class="form__block-input">
                   </label>

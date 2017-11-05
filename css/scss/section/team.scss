@@ -17,12 +17,19 @@
   top: 0;
   right: 0;
   bottom: 0;
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .section__content {
   display: flex;
   flex-direction: column;
-  margin-left: rem(80px);
+  margin-left: rem(100px);
+  @include tablets {
+    margin: 0;
+  }
 }
 
 .content__title {
@@ -31,15 +38,19 @@
   font-weight: normal;
   color: $yellow;
   margin-top: rem(90px); 
-  margin-bottom: rem(90px);
+  margin-bottom: rem(70px);
+  text-align: center;
 }
 
 .accordeon__list {
   color: #fff;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .accordeon__item {
-  margin-bottom: rem(40px);
+  margin-bottom: rem(28px);
 }
 
 .item__title {
@@ -48,6 +59,10 @@
   font-family: Gagalin, sans-serif;
   font-size: rem(14px);
   cursor: pointer;
+  @include tablets {
+    display: inline;
+    font-size: rem(24.39px);
+  }
 
   &:before {
     position: absolute;
@@ -71,6 +86,12 @@
 .item__info {
   height: 0;
   overflow: hidden;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(15px);
+    justify-content: center;
+  }
 }
 
 .item__info-active {
@@ -78,8 +99,12 @@
   height: 100%;
 }
 
+.info_pic {
+  display: flex;
+  justify-content: center;
+}
+
 .info__img {
-  position: relative;
   border-radius: 50%;
   overflow: hidden;
   height: rem(100px);
@@ -92,6 +117,11 @@
 .info__section {
   margin-left: rem(20px);
   max-width: rem(210px);
+  @include tablets {
+    max-width: rem(335px);
+    margin-left: 0;
+    margin-top: rem(24px);
+  }
 }
 
 .info__occ {

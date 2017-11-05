@@ -8,6 +8,7 @@ $desktop: 1200px;
 $laptop: 992px;
 $tablets: 768px;
 $phones: 480px;
+$small-phones: 320px;
 
 @import url("normalize.css");
 @import "./scss/config/media";

@@ -17,6 +17,7 @@
   font-size: rem(72px);
   font-weight: normal;
   color: $yellow;
+  text-align: center;
 }
 
 .form {
@@ -29,11 +30,22 @@
 
 .order__form {
   display: flex;
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 19%;
+  }
+  @include phones {
+    margin: 0;
+  }
 }
 
 .form__col {
   width: 50%;
   margin-right: rem(20px);
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .form__row {
@@ -42,11 +54,19 @@
 
   &-radio {
     justify-content: flex-start;
-    margin-left: rem(20px);
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &-buttons {
     margin-left: rem(20px);
+    @include tablets {
+      margin-top: 40px;
+    }
+    @include phones {
+      justify-content: center;
+    }
   }
 }
 
@@ -55,6 +75,15 @@
   width: 100%;
   flex: 1;
   margin-left: rem(20px);
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.form__block-phones {
+  @include phones {
+    display: none;
+  }
 }
 
 .form__radio {
@@ -84,7 +113,7 @@
     width: rem(0px);
     height: rem(0px);
     border-radius: 50%;
-    background: red;
+    background: $orange;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -113,8 +142,9 @@
   .radio__item:checked {
     &+.radio__item-fake {
       &:after {
-        background: url("../img/check.png") no-repeat transparent;
+        background: url("../icons/check.svg") no-repeat transparent;
         background-size: contain;
+        fill: red;
         width: rem(11px);
         height: rem(11px);
       }
@@ -136,6 +166,12 @@
   border-radius: rem(5px);
   padding: rem(5px);
   width: 100%;
+  @include tablets {
+    &:focus{
+      border: 1px solid $yellow;
+      outline: none;
+    }
+  }
 
   &-textarea {
     height: rem(110px);

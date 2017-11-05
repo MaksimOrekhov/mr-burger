@@ -1,7 +1,12 @@
 .footer__container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .footer {
@@ -15,6 +20,11 @@
   width: 50%;
   padding-top: rem(12px);
   padding-bottom: rem(12px);
+  @include phones {
+    width: 100%;
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+  }
 }
 
 .address {
@@ -48,6 +58,11 @@
   justify-content: flex-end;
   align-items: center;  
   width: 50%;
+  @include phones {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: rem(20px);
+  }
 }
 
 .socials__link {

@@ -15,6 +15,13 @@
   color: #fff;
   margin-top: rem(115px); 
   margin-left: rem(95px);
+  @include phones {
+    margin: rem(60px);
+  }
+  @include small-phones {
+    margin: rem(30px);
+    font-size: rem(62px);
+  }
 }
 
 .acco {
@@ -23,38 +30,41 @@
   top: 0;
   right: 0;
   height: 100%;
-}
 
-.acco__list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.acco__item {
-  position: relative;
-  display: flex;
-  width: rem(80px);
-  flex-direction: column;
-  white-space: nowrap;
-  cursor: pointer;
-
-  &-text {
-    width: 0;
-    overflow: hidden;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  &-title {
-    font-family: Gagalin, sans-serif;
-    font-size: rem(40px);
-    color: #fff;
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &__block {
-      transform: rotate(-90deg);
+  &__item {
+    position: relative;
+    display: flex;
+    width: rem(80px);
+    flex-direction: column;
+    white-space: nowrap;
+    cursor: pointer;
+  
+    &-text {
+      width: 0;
+      overflow: hidden;
+    }
+  
+    &-title {
+      font-family: Gagalin, sans-serif;
+      font-size: rem(40px);
+      color: #fff;
+      position: absolute; 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include tablets {
+        top: 72%;
+      }
+  
+      &__block {
+        transform: rotate(-90deg);
+      }
     }
   }
 }
