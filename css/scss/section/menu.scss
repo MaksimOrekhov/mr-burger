@@ -41,10 +41,19 @@
   &__item {
     position: relative;
     display: flex;
-    width: rem(80px);
+    width: 5vw;
     flex-direction: column;
     white-space: nowrap;
     cursor: pointer;
+    @include tablets {
+      width: 10.5vw;
+    }
+    @include phones {
+      width: 16vw;
+    }
+    @include small-phones {
+      width: 19vw;
+    }
 
     &-overlay {
       position: absolute;
@@ -73,7 +82,6 @@
         white-space: normal;
         padding: 10vh 5vw 10vh 10vw;
         font-family: "Ubuntu", sans-serif;
-        font-weight: rem(24px);
         z-index: 2;
       }
     }

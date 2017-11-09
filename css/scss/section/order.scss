@@ -6,7 +6,6 @@
   background: url("../img/order-bg.png") center center no-repeat;
   background-size: cover;
   min-height: 650px;
-  font-family: "Ubuntu Light", sans-serif;
   font-size: rem(14px);
   color: #fff;
 }
@@ -60,7 +59,6 @@
   }
 
   &-buttons {
-    margin-left: rem(20px);
     @include tablets {
       margin-top: 40px;
     }
@@ -197,5 +195,6 @@
 
   &:hover {
     text-decoration: underline;
+    font-weight: bold;
   }
 }

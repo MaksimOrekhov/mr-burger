@@ -4,4 +4,83 @@
   width: 100vw;
   height: 100vh;
   min-height: 650px;  
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+}
+
+.slider__container {
+  height: 100%;
+}
+
+.content__img {
+  position: relative;
+}
+
+.kkal__pic {
+  fill: #fad29d;
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.content__info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 50%;
+}
+
+.info {
+  &__title {
+    font-family: Gagalin;
+    font-size: rem(72px);
+    color: #fff;
+    line-height: 0.89em;
+    margin-bottom: rem(50px);
+  }
+  &__desc {
+    line-height: 1.5em;
+    color: #fff;
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: rem(14px);
+    margin-bottom: rem(38px);
+  }
+}
+
+.info__price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.price__amount {
+  font-family: Gagalin;
+  font-size: rem(72px);
+  color: $orange;
+  word-spacing: rem(-15px);
+  margin-right: rem(30px);
+}
+
+.amount__currency {
+    font-size: rem(30px);
+}
+
+.order__button--slider {
+  margin-bottom: rem(5px);
+}
+
+.scroll--slider {
+  margin: 0;
+}
+
+.scroll__link--left {
+  transform: rotate(90deg);
+}
+
+.scroll__link--right {
+  transform: rotate(-90deg);
+  margin-left: rem(37px);
 }

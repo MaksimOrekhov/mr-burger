@@ -18,7 +18,7 @@
           <header class="header">
             <section class="header__logo">
               <a href="#" class="logo__link">
-                <img src="img/logo.png" alt="" class="logo__pic">
+                <img src="icons/logo.svg" alt="" class="logo__pic">
               </a>
             </section>
             <section class="menu">
@@ -45,7 +45,7 @@
                 </ul>
               </nav>
             </section>
-              <div class="order__button">
+              <div class="order__button order__button--header">
                 <a href="#" class="order__link">заказать</a>
               </div>
               <a href="#" class="burger__menu">
@@ -129,8 +129,40 @@
         <!-- Слайдер -->
         <div class="maincontent">
           <section class="slider">
-            <div class="container">
-
+            <div class="container slider__container">
+              <div class="slider__content">
+                <div class="scroll scroll--slider">
+                  <a href="#" class="scroll__link scroll__link--left">
+                    <img src="img/arrow-scroll.png" alt="" class="scroll__img">
+                  </a>
+                </div>
+                <div class="content__img">
+                  <img src="img/slider-img.png" alt="" class="img__pic">
+                  <div class="img__kkal">
+                    <svg class="kkal__pic">
+                      <use xlink:href="./icons/sprite.svg#kkal"></use>
+                      <span class="kkal__amount">1200</span>
+                    </svg>
+                    <div class="kkal__name">ккал</div>
+                  </div>
+                </div>
+                <div class="content__info">
+                  <div class="info__title">dark beef burger</div>
+                  <div class="info__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                  <div class="info__price">
+                    <div class="price__amount">500 <span class="amount__currency">рублей</span>
+                    </div>
+                    <div class="order__button order__button--slider">
+                      <a href="#" class="order__link">заказать</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="scroll scroll--slider">
+                  <a href="#" class="scroll__link scroll__link--right">
+                    <img src="img/arrow-scroll.png" alt="" class="scroll__img">
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -412,7 +444,7 @@
       <!-- Местонахождение -->
       <div class="maincontent">
         <section class="location">
-          
+           
         </section>
       </div>
       

@@ -58,7 +58,7 @@
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 
   &:hover {
     border-bottom: 2px solid #fff;
@@ -75,15 +75,22 @@
   color: #fff;  
   font-size: rem(13px);
   font-weight: bold;
+  transform: scale(1);
+  transition: 0.4s;
 
   &:hover {
     background-color: darken($orange, 10%);
-    transition: 0.3s;
+    transform: scale(1.2);
+    transition: 0.4s;
   }
 }
 
 .order__button {
   text-transform: uppercase;
+
+  &--header {
+    margin-top: rem(6px);
+  }
 }
 
 .burger__menu {
