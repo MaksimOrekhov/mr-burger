@@ -10,7 +10,10 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-}
+    @include tablets {
+      flex-direction: column;
+    }
+  }
 }
 
 .slider__container {
@@ -19,6 +22,127 @@
 
 .content__img {
   position: relative;
+  width: 76%;
+}
+
+.img__ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: rem(90px);
+  height: rem(90px);
+  top: rem(-70px);
+  left: rem(11px);
+  background-color: #f08c33;
+  border-radius: rem(5px);
+  cursor: pointer;
+  &:hover {
+    background-color: $orange;
+  }
+  @include phones {
+    top: -51%;
+    left: -16%;
+  }
+}
+
+.ingredients__pic {
+  text-align: center;
+  width: rem(45px);
+  height: rem(45px);
+  fill: #fff;
+}
+
+.ingredients__name {
+  font-family: Gagalin, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.ingredients__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  width: rem(270px);
+  height: rem(333px);
+  background-color: rgba(255,255,255,0.9);
+  border-radius: rem(5px);
+  top: rem(-70px);
+  left: rem(100px);
+  opacity: 0;
+  padding: rem(20px);
+  @include tablets {
+    padding-right: rem(70px);
+  }
+  @include phones {
+    width: rem(375px);
+    top: -51%;
+    left: 9%;
+    z-index: 2;
+    padding-right: rem(120px);
+  }
+  @include small-phones {
+    width: rem(305px);
+    left: 13%;
+    padding-right: rem(100px);
+  }
+}
+
+.close__cross {
+  display: none;
+  @include tablets {
+    display: block;
+    opacity: 0.8;
+    position: absolute;
+    top: 5%;
+    left: 87%;
+  }
+}
+
+.ingredients__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &:not(:last-child) {
+    margin-bottom: rem(7px);
+  }
+}
+
+.item__pic {
+  width: rem(45px);
+  height: rem(40px);
+  margin-right: rem(27px);
+
+  &--beef, &--sauce {
+    fill: $orange;
+  }
+  &--buns, &--cheese {
+    fill: $yellow;
+  }
+  &--salad, &--cucumber {
+    fill: $green;
+  }
+}
+
+.item__name {
+  flex-grow: 2;
+}
+
+.img__kkal {
+  position: absolute;
+  width: rem(60px);
+  height: rem(75px);
+  margin-left: rem(15px);
+  @include tablets {
+    top: -21%;
+    left: 76%;
+  }
+  @include phones {
+    top: -51%;
+    left: 92%;
+  }
 }
 
 .kkal__pic {
@@ -27,11 +151,34 @@
   height: rem(60px);
 }
 
+.kkal__amount {
+  position: absolute;  
+  font-family: Gagalin, sans-serif;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,.5);
+  top: 36%;
+  left: 21%;
+}
+
+.kkal__name {
+  font-family: Gagalin, sans-serif;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,.5);
+  text-align: center;
+}
+
 .content__info {
   display: flex;
   flex-direction: column;
   align-content: center;
   width: 50%;
+  @include tablets {
+    text-align: center;
+    width: 60%;
+  }
+  @include phones {
+    width: 95%;
+  }
 }
 
 .info {
@@ -41,6 +188,9 @@
     color: #fff;
     line-height: 0.89em;
     margin-bottom: rem(50px);
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
   }
   &__desc {
     line-height: 1.5em;
@@ -48,12 +198,18 @@
     font-family: "Ubuntu Light", sans-serif;
     font-size: rem(14px);
     margin-bottom: rem(38px);
+    @include tablets {
+      text-align: center;
+      margin-bottom: rem(20px);
+    }
   }
-}
-
-.info__price {
-  display: flex;
-  align-items: flex-end;
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    @include tablets {
+      justify-content: center;
+    }
+  }
 }
 
 .price__amount {
@@ -62,14 +218,23 @@
   color: $orange;
   word-spacing: rem(-15px);
   margin-right: rem(30px);
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 .amount__currency {
     font-size: rem(30px);
+    @include phones {
+      font-size: rem(24px);
+    }
 }
 
 .order__button--slider {
   margin-bottom: rem(5px);
+  @include tablets {
+    margin: 0;
+  }
 }
 
 .scroll--slider {
@@ -78,9 +243,26 @@
 
 .scroll__link--left {
   transform: rotate(90deg);
+  @include tablets {
+    position: absolute;
+    top: 31%;
+    left: 9%;
+  }
+  @include tablets {
+    top: 30%;
+    left: 1%;
+  }
 }
 
 .scroll__link--right {
   transform: rotate(-90deg);
-  margin-left: rem(37px);
+  @include tablets {
+    position: absolute;
+    top: 31%;
+    left: 85%;
+  }
+  @include tablets {
+    top: 30%;
+    left: 91%;
+  }
 }
