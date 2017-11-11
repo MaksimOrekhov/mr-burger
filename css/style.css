@@ -658,7 +658,7 @@ html {
     .ingredients__list {
       width: 23.4375rem;
       top: -51%;
-      left: 9%;
+      left: 7%;
       z-index: 2;
       padding-right: 7.5rem; } }
   @media screen and (max-width: 320px) {
