@@ -219,6 +219,7 @@ html {
       text-align: left; } }
 
 .main__page {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,6 +251,9 @@ html {
     display: inline-block;
     margin-top: 0.75rem;
     margin-right: auto; }
+    @media screen and (max-width: 768px) {
+      .header__logo {
+        z-index: 5; } }
 
 .menu {
   display: -webkit-box;
@@ -271,12 +275,46 @@ html {
     display: flex;
     list-style: none;
     height: 2.1875rem; }
+    .menu__list--tablets {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 1.5rem;
+      text-align: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 100vh;
+      font-weight: normal; }
+  .menu__close {
+    position: absolute;
+    top: 2.8125rem;
+    right: 1.875rem; }
+  @media screen and (max-width: 768px) {
+    .menu__item {
+      margin-bottom: 1.5625rem; } }
   @media screen and (max-width: 768px) {
     .menu {
       display: none; } }
   @media screen and (max-width: 480px) {
     .menu {
       display: none; } }
+  .menu--tablets {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      .menu--tablets {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(47, 50, 52, 0.99);
+        z-index: 3;
+        top: 0;
+        left: 0;
+        margin: 0; } }
 
 .menu__item:not(:last-child):after {
   content: "\2022";
@@ -285,6 +323,18 @@ html {
   margin-right: 0.8125rem;
   color: #fff;
   font-size: 0.8125rem; }
+  @media screen and (max-width: 768px) {
+    .menu__item:not(:last-child):after {
+      font-size: 1.5rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 1.5625rem; } }
 
 .item__link {
   display: inline-block;
@@ -329,6 +379,7 @@ html {
 
 .burger__menu {
   margin-left: 1.875rem;
+  margin-top: 0.625rem;
   display: none; }
   @media screen and (max-width: 768px) {
     .burger__menu {
