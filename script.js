@@ -10,6 +10,10 @@ burgerButton.addEventListener('touchstart', function() {
   tabletsMenu.style.display = "block";
 });
 
+burgerButton.addEventListener('touchend', function() {
+  tabletsMenu.style.display = "block";
+});
+
 tabletsMenuClose.addEventListener('touchstart', function() {
   tabletsMenu.style.display = "none";
 });
