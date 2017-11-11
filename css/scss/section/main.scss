@@ -54,6 +54,10 @@
     position: absolute;
     top: rem(45px);
     right: rem(30px);
+    @include tablets {
+      top: rem(40px);
+      right: rem(23px);
+    }
   }
 
   &__item {

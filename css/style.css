@@ -293,6 +293,10 @@ html {
     position: absolute;
     top: 2.8125rem;
     right: 1.875rem; }
+    @media screen and (max-width: 768px) {
+      .menu__close {
+        top: 2.5rem;
+        right: 1.4375rem; } }
   @media screen and (max-width: 768px) {
     .menu__item {
       margin-bottom: 1.5625rem; } }
@@ -1527,10 +1531,12 @@ html {
       width: 50vw; }
       @media screen and (max-width: 768px) {
         .acco__item--active {
-          width: 79vw; } }
+          width: 79vw;
+          z-index: 2; } }
       @media screen and (max-width: 480px) {
         .acco__item--active {
-          width: 68vw; } }
+          width: 68vw;
+          z-index: 2; } }
       @media screen and (max-width: 320px) {
         .acco__item--active {
           width: 62vw; } }
