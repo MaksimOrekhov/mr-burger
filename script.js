@@ -21,6 +21,7 @@ tabletsMenuClose.addEventListener('touchstart', function() {
 // работа выпадающего меню с ингредиентами
 hover.addEventListener('pointerenter', function() {
   list.style.opacity = 1;
+  list.style.transition = "0.5s";
 });
 
 hover.addEventListener('pointerleave', function() {
