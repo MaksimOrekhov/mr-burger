@@ -8,6 +8,7 @@ let tabletsMenuClose = document.querySelector('.menu__close')
 //работа гамбургер-меню на планшетах/телефонах
 burgerButton.addEventListener('touchstart', function() {
   tabletsMenu.style.display = "block";
+  tabletsMenu.style.position = "fixed";
 });
 
 burgerButton.addEventListener('touchend', function() {

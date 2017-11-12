@@ -7,6 +7,8 @@
 
   <link rel="stylesheet" href="./css/style.css">
   <title>Ресторан Mr. Burger</title>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -524,7 +526,7 @@
       <!-- Местонахождение -->
       <div class="maincontent">
         <section class="location">
-           
+           <div id="map"></div>
         </section>
       </div>
       
@@ -593,6 +595,7 @@
           </div>
         </div>
       </footer>
-<script src="./script.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./map.js"></script>
 </body>
 </html>
