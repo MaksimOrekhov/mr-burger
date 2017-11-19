@@ -100,6 +100,12 @@
   
 }
 
+.overlay__text-modal {
+  @include phones {
+    display: block;
+  }
+}
+
 .button__link {
   display: inline-block;  
   color: #fff;
@@ -128,11 +134,15 @@
 .popup {
   display: none;
   border-radius: 5px;  
+  @include phones {
+    width: 70vw;
+  }
   &__layout {
     width: 475px;
     margin: 0 auto;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    
   }
 }

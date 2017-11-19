@@ -178,4 +178,7 @@ $('.acco__item').on('click', (e) => {
 
 // });
 
+$(".main").onepage_scroll({
+  pagination: false  
+});
 

@@ -95,6 +95,9 @@
     top: rem(7px);
     left: rem(-20px);
     transition: 0.5s;    
+    @include tablets {
+      top: rem(13px);
+    }
   }
 
   &-active {

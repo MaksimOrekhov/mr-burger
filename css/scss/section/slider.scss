@@ -10,19 +10,17 @@
   &__content {
     width: 100%;
     display: inline-flex;
-    flex: 1;
-    height: 100%;
     align-items: center;
     position: relative;
-    margin: 0 auto;
+    
     @include tablets {
       display: flex;      
       flex-direction: column;
-      padding: 0 rem(130px);
-      padding-top: 20%;
+      padding: 0 rem(80px);
+      padding-top: 27%;
     }
     @include phones {
-      padding: 0 30px;  
+      padding: 0 rem(20px);  
       padding-top: 50%;    
     }
   }
