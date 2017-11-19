@@ -45,6 +45,7 @@
     flex-direction: column;
     white-space: nowrap;
     cursor: pointer;
+    transition: 0.8s;    
     @include tablets {
       width: 10.5vw;
     }
@@ -64,6 +65,7 @@
     
     &--active {
       width: 50vw;
+      transition: 0.8s;
       @include tablets {
         width: 79vw;
         z-index: 2;
@@ -79,24 +81,30 @@
         left: 8%;
       }
       .acco__item-text {
-        width: 50vw;
+        width: 45vw;
         color: #fff;
         white-space: normal;
         padding: 10vh 5vw 10vh 10vw;
         font-family: "Ubuntu", sans-serif;
         z-index: 2;
+        opacity: 1;
+        transition: 0.8s;  
       }
     }
   
     &-text {
-      width: 0;
-      overflow: hidden;
+      opacity: 0;
+      overflow: hidden;    
     }
   
     &-title {
       font-family: Gagalin, sans-serif;
       font-size: rem(40px);
       color: #fff;
+
+      &--active {
+        color: $yellow;
+      }
       
       position: absolute; 
       top: 50%;

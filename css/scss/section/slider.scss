@@ -3,26 +3,58 @@
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  min-height: 650px;  
-
+  min-height: 650px; 
+  position: relative;
+  
+ 
   &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    display: inline-flex;
+    flex: 1;
     height: 100%;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
     @include tablets {
+      display: flex;      
       flex-direction: column;
+      padding: 0 rem(130px);
+      padding-top: 20%;
+    }
+    @include phones {
+      padding: 0 30px;  
+      padding-top: 50%;    
     }
   }
 }
 
-.slider__container {
+.slider__wrapper {
+  width: 70vw;
+  overflow: hidden;
+  height: 90%;
+}
+
+.slider__list {
   height: 100%;
+  position: relative;
+  transition: left .5s;
+  display: flex;
+}
+
+.slider__container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative; 
+  width: 95vw; 
 }
 
 .content__img {
-  position: relative;
-  width: 76%;
+  width: 50vw;
+  text-align: center;
+   @include tablets {
+     height: 30vw;
+   }
 }
 
 .img__ingredients {
@@ -33,7 +65,7 @@
   position: absolute;
   width: rem(90px);
   height: rem(90px);
-  top: rem(-70px);
+  top: rem(90px);
   left: rem(11px);
   background-color: #f08c33;
   border-radius: rem(5px);
@@ -41,9 +73,13 @@
   &:hover {
     background-color: $orange;
   }
+  @include tablets {
+    top: rem(80px);
+    left: rem(60px);
+  }
   @include phones {
-    top: -51%;
-    left: -16%;
+    top: 0;
+    left: rem(15px);
   }
 }
 
@@ -69,24 +105,27 @@
   height: rem(333px);
   background-color: rgba(255,255,255,0.9);
   border-radius: rem(5px);
-  top: rem(-70px);
+  top: rem(90px);
   left: rem(100px);
   opacity: 0;
   padding: rem(20px);
   @include tablets {
     padding-right: rem(70px);
+    left: rem(150px);
+    top: rem(80px);
   }
   @include phones {
-    width: rem(375px);
-    top: -51%;
-    left: 7%;
+    width: rem(210px);
+    top: 0;
+    left: rem(105px);
     z-index: 2;
-    padding-right: rem(120px);
+    padding-right: rem(40px);
+    font-size: rem(10px);
   }
   @include small-phones {
-    width: rem(305px);
-    left: 13%;
-    padding-right: rem(100px);
+    width: rem(200px);
+    left: rem(105px);
+    padding-right: rem(30px);
   }
 }
 
@@ -134,14 +173,15 @@
   position: absolute;
   width: rem(60px);
   height: rem(75px);
-  margin-left: rem(15px);
+  bottom: 25%;
+  left: rem(15px);
   @include tablets {
-    top: -21%;
+    top: 10%;
     left: 76%;
   }
   @include phones {
-    top: -51%;
-    left: 92%;
+    top: 1%;
+    left: 80%;
   }
 }
 
@@ -171,10 +211,10 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  width: 50%;
+  width: 68%;
   @include tablets {
     text-align: center;
-    width: 60%;
+    width: 80%;
   }
   @include phones {
     width: 95%;
@@ -190,6 +230,9 @@
     margin-bottom: rem(50px);
     @include tablets {
       margin-bottom: rem(30px);
+    }
+    @include phones {
+      font-size: rem(50px);
     }
   }
   &__desc {
@@ -208,6 +251,7 @@
     align-items: flex-end;
     @include tablets {
       justify-content: center;
+      
     }
   }
 }
@@ -217,9 +261,11 @@
   font-size: rem(72px);
   color: $orange;
   word-spacing: rem(-15px);
-  margin-right: rem(30px);
-  @include phones {
+  @include tablets {
     font-size: rem(50px);
+  }
+  @include phones {
+    font-size: rem(30px);
   }
 }
 
@@ -232,37 +278,46 @@
 
 .order__button--slider {
   margin-bottom: rem(5px);
+  margin-left: rem(20px);
   @include tablets {
-    margin: 0;
+  margin-left: rem(20px);
+  
   }
 }
 
 .scroll--slider {
   margin: 0;
+  width: 6.5%;
+  height: 100%;
+  @include phones {
+    width: 25%;
+  }
 }
 
 .scroll__link--left {
   transform: rotate(90deg);
-  @include tablets {
     position: absolute;
-    top: 31%;
+    cursor: pointer;
+    top: 50%;
+  @include tablets {
+    top: 50%;
     left: 9%;
   }
-  @include tablets {
-    top: 30%;
-    left: 1%;
+  @include phones {
+    top: 50%;
   }
 }
 
 .scroll__link--right {
   transform: rotate(-90deg);
-  @include tablets {
     position: absolute;
-    top: 31%;
-    left: 85%;
-  }
+    cursor: pointer;
+    top: 50%;
   @include tablets {
-    top: 30%;
-    left: 91%;
+    top: 50%;
+    right: 9%;
+  }
+  @include phones {
+    top: 50%;
   }
 }

@@ -124,3 +124,15 @@
     display: none;
   }
 }
+
+.popup {
+  display: none;
+  border-radius: 5px;  
+  &__layout {
+    width: 475px;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
