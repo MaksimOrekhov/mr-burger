@@ -243,44 +243,44 @@
   }
 }
 
-.paginator {
-  position: absolute;
-  top: rem(75px);
-  right: rem(50px);
-  position: fixed;
-  z-index: 100;
+// .paginator {
+//   position: absolute;
+//   top: rem(75px);
+//   right: rem(50px);
+//   position: fixed;
+//   z-index: 100;
 
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+//   &__list {
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+//   }
 
-  &__link {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    text-align: center; 
-    font-size: rem(20px);
-    line-height: 1.4rem;
-  }
+//   &__link {
+//     display: inline-block;
+//     text-decoration: none;
+//     color: #fff;
+//     text-align: center; 
+//     font-size: rem(20px);
+//     line-height: 1.4rem;
+//   }
 
-  &__link-active:after {
-    content: '';
-    position: absolute;
-    top: rem(2px);
-    left: rem(-5px);
-    width: rem(16px);
-    height: rem(16px);
-    border: 1px solid white;
-    border-radius: 50%;
-    background-color: transparent;
-  }
+//   &__link-active:after {
+//     content: '';
+//     position: absolute;
+//     top: rem(2px);
+//     left: rem(-5px);
+//     width: rem(16px);
+//     height: rem(16px);
+//     border: 1px solid white;
+//     border-radius: 50%;
+//     background-color: transparent;
+//   }
 
-  @include tablets {
-    display: none;
-  }
-}
+//   @include tablets {
+//     display: none;
+//   }
+// }
 
 .scroll {
   display: flex;
@@ -293,3 +293,36 @@
   }
 }
 
+.onepage-pagination {
+  top: rem(75px);
+  right: rem(50px);
+  position: fixed;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include tablets {
+    display: none;
+  }
+  & > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center; 
+    font-size: rem(20px);
+    line-height: 1.4rem;
+  }
+  & > li > a:before {
+    background: #fff;
+    width: rem(5px);
+    height: rem(5px);
+  }
+  & > li > a.active:before {
+    content: '\2022';
+    border: 1px solid white;
+    width: rem(16px);
+    height: rem(16px);
+    left: rem(4px);
+    line-height: rem(16px);
+  }
+}

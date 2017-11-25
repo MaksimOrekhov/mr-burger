@@ -130,7 +130,7 @@ $('.scroll__link').on('click', function(e) {
 
 $('.acco__item').on('click', (e) => {
 
-  let $this = $(e.currentTarget),
+  let $this = $(e.target),
       container = $this.closest('.acco'),
       items = container.find('.acco__item'),
       activeItem = items.filter('.acco__item--active'),
@@ -158,27 +158,28 @@ $('.acco__item').on('click', (e) => {
 
 //прокрутка страниц 
 
-// let section = document.getElementsByTagName('section'),
-//     currentSection = section.find('.active'),
-//     nextSection = currentSection.next(),
-//     prevSection = currentSection.prev();
-
-// currentSection.scroll( () => {
-
-  // if (!currentSection.hasClass('active')) {
-  //   section.removeClass('active');
-  // } else {
-  //   section.toggleClass('active');
-  // }
-  // if($(window).scrollTop()+$(window).height()>=$(document).height()){
-  //   section.removeClass('active');
-  //   } else {
-  //     section.toggleClass('active');
-  //   }
-
-// });
-
 $(".main").onepage_scroll({
-  pagination: false  
+   
 });
+
+// пагинация 
+
+
+
+  let paginatorList = document.getElementsByClassName('paginator__list');
+  let paginatorItem = document.querySelectorAll('.paginator__link');
+  let paginatorItemNext = $(paginatorItem).next();
+  let paginatorItemPrev = $(paginatorItem).prev();
+  let section = document.getElementsByTagName("section");
+  
+
+  if ($(section).hasClass('active')) {
+    $(paginatorList).removeClass('paginator__link-active');
+    $(paginatorItem).addClass('paginator__link-active');
+    
+  } else {
+    $(paginatorItem).toggleClass('paginator__link-active');
+    console.log(paginatorItem[i])
+  }
+  
 

@@ -10,6 +10,8 @@ function init(){
         center: [59.92822098, 30.39569750],
         zoom: 12
     }); 
+
+    myMap.behaviors.disable(['drag', 'scrollZoom', 'dblClickZoom']);
     
     myPlacemark = new ymaps.Placemark([59.97340750, 30.30945853], {
         hintContent: 'Ресторан Mr Burger',
