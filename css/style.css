@@ -59,7 +59,7 @@
 
 .container {
   width: 95%;
-  max-width: 940px;
+  max-width: 58.75rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +102,7 @@ html {
   background: url("../img/about-bg.png") center center no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -235,7 +235,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url("../img/bg.png") center center no-repeat;
   background-size: cover;
   font-size: 0.8125rem;
@@ -656,7 +656,7 @@ html {
   background: linear-gradient(to bottom, #f9b43b, #eb8c38 48%, #f9b43b);
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
   position: relative; }
   .slider__content {
@@ -1020,7 +1020,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: 650px; }
   .comments__block {
     display: -webkit-box;
@@ -1276,7 +1276,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url("../img/order-bg.png") center center no-repeat;
   background-size: cover;
   min-height: 650px;
@@ -1474,7 +1474,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url("../img/team-bg.png") no-repeat;
   background-size: cover;
   min-height: 650px; }
@@ -1640,7 +1640,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url("../img/menu-bg.png") no-repeat;
   background-size: cover;
   min-height: 650px; }
@@ -1787,7 +1787,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   min-height: 650px; }
 
 #map {
