@@ -243,44 +243,79 @@
   }
 }
 
-// .paginator {
-//   position: absolute;
-//   top: rem(75px);
-//   right: rem(50px);
-//   position: fixed;
-//   z-index: 100;
+.paginator__list {
+  z-index: 5;
+  position: absolute;
+  top: rem(90px);
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  @include tablets {
+    display: none;
+  }
 
-//   &__list {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//   }
+  & li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(20px);
+    height: rem(20px);
+    margin: rem(2px) 0;
+    transition: all 1s;
+    cursor: pointer;
+  }
 
-//   &__link {
-//     display: inline-block;
-//     text-decoration: none;
-//     color: #fff;
-//     text-align: center; 
-//     font-size: rem(20px);
-//     line-height: 1.4rem;
-//   }
+  & li:hover:after {
+    width: rem(15px);
+    height: rem(15px);
+  }
 
-//   &__link-active:after {
-//     content: '';
-//     position: absolute;
-//     top: rem(2px);
-//     left: rem(-5px);
-//     width: rem(16px);
-//     height: rem(16px);
-//     border: 1px solid white;
-//     border-radius: 50%;
-//     background-color: transparent;
-//   }
+  & li:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(3px);
+    height: rem(3px);
+    border: rem(1px) solid #ffffff;
+    border-radius: 50%;
+    transition: all .35s;
+    content: '';
+}
 
-//   @include tablets {
-//     display: none;
-//   }
-// }
+  & li:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(5px);
+    height: rem(5px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    content: '';
+}
+
+  & li.active:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(5px);
+    height: rem(5px);
+    margin-top: 0;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 50%;
+    content: '';
+  }
+
+  & li.active:after {
+    width: rem(15px);
+    height: rem(15px);
+  }
+}
+
 
 .scroll {
   display: flex;

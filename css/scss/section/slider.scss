@@ -8,7 +8,8 @@
   
  
   &__content {
-    width: 100%;
+    flex-basis: 100%;
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     position: relative;
@@ -16,18 +17,13 @@
     @include tablets {
       display: flex;      
       flex-direction: column;
-      padding: 0 rem(80px);
-      padding-top: 27%;
-    }
-    @include phones {
-      padding: 0 rem(20px);  
-      padding-top: 50%;    
+      justify-content: center;
     }
   }
 }
 
 .slider__wrapper {
-  width: 70vw;
+  width: rem(940px);
   overflow: hidden;
   height: 90%;
 }
@@ -44,15 +40,12 @@
   flex-direction: row;
   height: 100%;
   position: relative; 
-  width: 95vw; 
 }
 
 .content__img {
-  width: 50vw;
+  width: 49%;
   text-align: center;
-   @include tablets {
-     height: 30vw;
-   }
+  
 }
 
 .img__ingredients {
@@ -262,9 +255,6 @@
   @include tablets {
     font-size: rem(50px);
   }
-  @include phones {
-    font-size: rem(30px);
-  }
 }
 
 .amount__currency {
@@ -303,6 +293,7 @@
   }
   @include phones {
     top: 50%;
+    left: 0;    
   }
 }
 
@@ -317,5 +308,6 @@
   }
   @include phones {
     top: 50%;
+    right: 0;
   }
 }

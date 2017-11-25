@@ -1,18 +1,25 @@
-let hover = document.querySelectorAll('.img__ingredients')
-let list = document.querySelectorAll('.ingredients__list')
-let listClose = document.querySelector('.close__cross')
-let burgerButton = document.querySelector('.burger__menu')
-let tabletsMenu = document.querySelector('.menu--tablets')
-let tabletsMenuClose = document.querySelector('.menu__close')
+'use strict'
+
+let hover = document.querySelectorAll('.img__ingredients');
+let list = document.querySelectorAll('.ingredients__list');
+let listClose = document.querySelector('.close__cross');
+let burgerButton = document.querySelector('.burger__menu');
+let tabletsMenu = document.querySelector('.menu--tablets');
+let tabletsMenuClose = document.querySelector('.menu__close');
+let menuLink = document.querySelectorAll('.menu__item');
 
 //работа гамбургер-меню на планшетах/телефонах
 
-$(burgerButton).click( () => {
+$(burgerButton).on('click touchstart touchend', () => {
     $(tabletsMenu).toggleClass('visible');
     $(tabletsMenu).css('position', 'fixed');
   });
 
-$(tabletsMenuClose).click( () => {
+$(tabletsMenuClose).on('click touchstart touchend', () => {
+  $(tabletsMenu).toggleClass('visible');
+});
+
+$(menuLink).on('click touchstart', () => {
   $(tabletsMenu).toggleClass('visible');
 });
 
@@ -50,7 +57,7 @@ $(listClose).on('touchstart', () => {
 
 //аккордеон 
   
-$('.item__title').on('click', e => {
+$('.item__title').on('click touchstart touchend', e => {
   const $this = $(e.currentTarget),
         item = $this.closest('.accordeon__item'),
         content = item.find('.item__info'),
@@ -84,7 +91,7 @@ let moveSlide = (container, slideNum) => {
   reqItem = items.eq(slideNum),
   reqIndex = reqItem.index(),
   list = container.find('.slider__list'),
-  duration = 0;
+  duration = 50;
   
 
 if (reqItem.length) {
@@ -97,7 +104,7 @@ if (reqItem.length) {
 }
 }
 
-$('.scroll__link').on('click', function(e) {
+$('.scroll__link').on('click touchstart', function(e) {
 
   e.preventDefault();
 
@@ -128,7 +135,7 @@ $('.scroll__link').on('click', function(e) {
 
 //вертикальный слайдер в секции Меню
 
-$('.acco__item').on('click', (e) => {
+$('.acco__item').on('click touchstart touchend', (e) => {
 
   let $this = $(e.target),
       container = $this.closest('.acco'),
@@ -158,28 +165,108 @@ $('.acco__item').on('click', (e) => {
 
 //прокрутка страниц 
 
-$(".main").onepage_scroll({
-   
+const display = $('.maincontent');
+const sections = $('.section');
+
+let inScroll = false;
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+const switchPaginator = sectionEq => {
+  sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+  $('.paginator__list').children('li').eq(sectionEq).addClass('active').siblings().removeClass('active')
+}
+
+const performTransition = sectionEq => {
+
+  if (inScroll) return
+    inScroll = true;
+
+    const position = (sectionEq * -100) + '%';  
+
+    display.css({
+      'transform' : `translate(0, ${position})`,
+      '-webkit-transform' : `translate(0, ${position})`
+    });
+  
+    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+
+    setTimeout(() => {
+      inScroll = false;
+      switchPaginator(sectionEq);
+    }, 1200);
+} 
+
+const defineSections = sections => {
+  const activeSection = sections.filter('.active');
+
+  return {
+    activeSection: activeSection,
+    nextSection: activeSection.next(),
+    prevSection: activeSection.prev()
+  }
+}
+
+const scrollToSection = direction => {
+  const section = defineSections(sections);
+
+  if (inScroll) return;
+
+  if (direction === 'up' && section.nextSection.length) {
+    performTransition(section.nextSection.index());
+  }
+
+  if (direction === 'down' && section.prevSection.length) {
+    performTransition(section.prevSection.index());
+  }
+} 
+
+$('.wrapper').on( {
+  wheel: e => {
+    const deltaY = e.originalEvent.deltaY;
+    let direction = (deltaY > 0) ? 'up' : 'down';
+
+    scrollToSection(direction);
+  },
+  touchmove: e => (e.preventDefault())
 });
 
-// пагинация 
+$(document).on('keydown', e => {
+  const section = defineSections(sections);
 
+  if (inScroll) return 
 
+  switch (e.keyCode) {
+    case 40:
+    if (!section.nextSection.length) return ;
+    performTransition(section.nextSection.index());
+    break;
 
-  let paginatorList = document.getElementsByClassName('paginator__list');
-  let paginatorItem = document.querySelectorAll('.paginator__link');
-  let paginatorItemNext = $(paginatorItem).next();
-  let paginatorItemPrev = $(paginatorItem).prev();
-  let section = document.getElementsByTagName("section");
+    case 38:
+    if (!section.prevSection.length) return ;
+    performTransition(section.prevSection.index());
+    break;
+    }
   
+});
 
-  if ($(section).hasClass('active')) {
-    $(paginatorList).removeClass('paginator__link-active');
-    $(paginatorItem).addClass('paginator__link-active');
-    
-  } else {
-    $(paginatorItem).toggleClass('paginator__link-active');
-    console.log(paginatorItem[i])
-  }
-  
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      scrollToSection(direction);
+    }
+  });
+}
 
+$('[data-scroll-to]').on('click touchstart', e => {
+
+  e.preventDefault();
+
+  const $this = $(e.currentTarget);
+  const sectionIndex = parseInt($this.attr('data-scroll-to'));
+
+  performTransition(sectionIndex);
+
+});
+ 
