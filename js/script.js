@@ -284,7 +284,7 @@ var submitForm = function (ev) {
       var mes = msg.mes,
           status = msg.status;
       if (status === 'OK') {
-          
+        form.append('<p class="success">' + mes + '</p>');
       } else{
           form.append('<p class="error">' + mes + '</p>');
       }
