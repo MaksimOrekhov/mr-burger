@@ -11,16 +11,15 @@
 }
 
 .order__title {
-  display: block;
   font-family: Gagalin, sans-serif;
   font-size: rem(72px);
   font-weight: normal;
   color: $yellow;
   text-align: center;
-}
-
-.form {
-  margin-top: rem(90px);
+  margin-bottom: rem(90px);
+  @include tablets {
+    margin-bottom: rem(15px);
+  }
 }
 
 .form__elem {
@@ -65,6 +64,13 @@
     @include phones {
       justify-content: center;
     }
+  }
+
+  &-buttons > .order__button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
   }
 }
 

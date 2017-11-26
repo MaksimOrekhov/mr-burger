@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="stylesheet" href="./css/onepage-scroll.css"> -->
+  <link href="./favicon.ico" type="image/x-icon"> 
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"> 
   <link rel="stylesheet" href="./css/jquery.fancybox.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Ресторан Mr. Burger</title>
@@ -741,44 +742,44 @@
 
     <!-- Форма заказа -->
     <section class="order section" id="order">
-      <div class="container">
+      <div class="container order__container">
         <div class="order__title">закажите доставку</div>
         <div class="form">
-          <form action="" class="form__elem">
+          <form action="server.php" method="post" class="form__elem" id="order-form">
             <div class="order__form">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Имя</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="user-name" name="user-name" required>
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Телефон</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="user-phone" name="user-phone" required>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Улица</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="street" name="street" required>
                 </label>
               </div> 
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Дом</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="house-number" name="house-number" required>
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Корпус</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="block-number" name="block-number">
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Квартира</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="flat-number" name="flat-number" required>
                 </label>
                 <label class="form__block form__block-phones">
                   <div class="form__block-title">Этаж</div>
-                  <input type="text" class="form__block-input">
+                  <input type="text" class="form__block-input" id="floor-number" name="floor-number">
                 </label>
               </div>
             </div>
@@ -786,39 +787,38 @@
               <div class="form__row">
                 <label for="" class="form__block">
                   <div class="form__block-title">Комментарий</div>
-                  <textarea type="text" class="form__block-input form__block-input-textarea"></textarea>
+                  <textarea type="text" class="form__block-input form__block-input-textarea" id="comment" name="comment"></textarea>
                 </label>
               </div>
               <div class="form__row form__row-radio">
                 <label class="form__radio">
-                  <input type="radio" name="payment" class="radio__item">
+                  <input type="radio" id="need-change" name="pay-option" value="Потребуется сдача" class="radio__item">
                   <div class="radio__item-fake"></div>
-                  <span class="form__block-title form__block-title-radio">Потребуется сдача</span>
+                  <span class="form__block-title form__block-title-radio" >Потребуется сдача</span>
                 </label>
                 <label class="form__radio">
-                  <input type="radio" name="payment" class="radio__item" checked>
+                  <input type="radio" id="card-pay" name="pay-option" value="Оплата по карте" class="radio__item" checked>
                   <div class="radio__item-fake"></div>
-                  <span class="form__block-title form__block-title-radio">Оплата по карте</span>
+                  <span class="form__block-title form__block-title-radio" >Оплата по карте</span>
                 </label>
               </div>
               <div class="form__row form__row-radio">
                 <label class="form__radio form__radio-checkbox">
                   <input type="checkbox" name="callback" class="radio__item" checked>
                   <div class="radio__item-fake"></div>
-                  <span class="form__block-title form__block-title-radio">Не перезванивать</span>
+                  <span class="form__block-title form__block-title-radio" id="callback" value="1">Не перезванивать</span>
                 </label>
               </div>
               <div class="form__row form__row-buttons">
-                <div class="order__button">
-                  <a href="#" class="order__link">заказать</a>
-                </div>
+                <button class="order__button" type="submit">
+                  <a class="order__link" data-src="#mail-modal" data-fancybox>заказать</a>
+                </button>
                 <input type="reset" class="reset__button" value="Очистить">
               </div>
             </div>
           </div>
           </form>
         </div>
-        
       </div>
     </section>
 
@@ -873,6 +873,11 @@
         <div class="overlay__text overlay__text-modal">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
     </div>
     </div>
+  </div>
+
+  <div class="popup" id="mail-modal">
+      <div class="overlay__title">Ваше письмо отправлено</div>
+      <div class="overlay__text overlay__text-modal">Спасибо за заказ!</div>
   </div>
 
   <aside class="paginator">

@@ -1284,15 +1284,15 @@ html {
   color: #fff; }
 
 .order__title {
-  display: block;
   font-family: Gagalin, sans-serif;
   font-size: 4.5rem;
   font-weight: normal;
   color: #f9b43b;
-  text-align: center; }
-
-.form {
-  margin-top: 5.625rem; }
+  text-align: center;
+  margin-bottom: 5.625rem; }
+  @media screen and (max-width: 768px) {
+    .order__title {
+      margin-bottom: 0.9375rem; } }
 
 .form__elem {
   -webkit-box-sizing: border-box;
@@ -1352,6 +1352,11 @@ html {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+  .form__row-buttons > .order__button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: transparent; }
 
 .form__block {
   display: block;
